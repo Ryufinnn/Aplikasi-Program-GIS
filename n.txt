@@ -1,0 +1,6 @@
+create table jenjang (id_jenjang tinyint(1), nama_jenjang varchar(2), primary key(id_jenjang) )
+create table pt (id_pt varchar(10), nama_pt varchar(50), alamat_pt varchar(100), kode_pos varchar(5), telp varchar(15), email varchar(50), website varchar(50), x varchar(15), y varchar(15), gambar varchar(100), primary key(id_pt) )
+create table fakultas (id_fakultas varchar(10), nama_fakultas varchar(50), id_pt varchar(10), primary key(id_fakultas) )
+create table prodi (id_prodi varchar(10), nama_prodi varchar(50), akreditasi varchar(1), status tinyint(1), id_jenjang tinyint(1), id_fakultas varchar(10), primary key(id_prodi) )
+create table fasilitas (id_fasilitas mediumint(7) not null auto_increment, id_pt varchar(10), nama_fasilitas varchar(100), primary key (id_fasilitas ))
+create table kategori (id_kategori tinyint(2) not null auto_increment, nama_kategori varchar (20), primary key (id_kategori) )
